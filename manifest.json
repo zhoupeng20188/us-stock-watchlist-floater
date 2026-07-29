@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "US Stock Watchlist Floater",
   "version": "1.0.0",
-  "description": "Shows a floating US stock watchlist at the bottom-right of any page. A circle rotates through prices and percent changes; hover to expand for volume ratio, turnover and more.",
+  "description": "Floating US stock watchlist on any page. Hover the ball for live prices, volume, turnover, market cap and more.",
   "permissions": ["storage", "alarms"],
   "host_permissions": [
     "*://push2.eastmoney.com/*",
@@ -15,9 +15,9 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "us-stock-watchlist-floater@zhoupeng20188.github.io",
-      "strict_min_version": "109.0",
+      "strict_min_version": "140.0",
       "data_collection_permissions": {
-        "required": []
+        "required": ["none"]
       }
     }
   },
