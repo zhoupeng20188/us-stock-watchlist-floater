@@ -9,7 +9,17 @@
     "*://searchapi.eastmoney.com/*"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "us-stock-watchlist-floater@zhoupeng20188.github.io",
+      "strict_min_version": "109.0",
+      "data_collection_permissions": {
+        "required": []
+      }
+    }
   },
   "action": {
     "default_popup": "popup.html",
