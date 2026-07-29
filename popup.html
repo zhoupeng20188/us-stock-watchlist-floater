@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>US Watchlist</h1>
+    <p class="hint">Enter a US ticker (e.g. AAPL / TSLA); the exchange is detected automatically</p>
+  </header>
+
+  <section class="add-row">
+    <input id="codeInput" type="text" placeholder="e.g. AAPL / NVDA" maxlength="10" autocomplete="off">
+    <button id="addBtn" disabled>Add</button>
+  </section>
+  <p id="msg" class="msg"></p>
+
+  <section class="list-wrap">
+    <h2>Watchlist <span id="count" class="count"></span></h2>
+    <ul id="list" class="list"></ul>
+    <p id="empty" class="empty">No stocks yet — add one above</p>
+  </section>
+
+  <footer>
+    <a class="kofi" href="https://ko-fi.com/forever1252" target="_blank" rel="noopener">☕ Buy me a coffee</a>
+    <span id="updatedAt" class="updated"></span>
+  </footer>
+
+  <script src="popup.js"></script>
+</body>
+</html>

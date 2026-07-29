@@ -1,0 +1,170 @@
+#us-floating {
+  position: fixed;
+  z-index: 2147483647;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  user-select: none;
+  pointer-events: auto;
+  --us-green: #52c41a;
+  --us-red: #ff4d4f;
+  --us-bg: rgba(20, 20, 20, 0.85);
+  --us-radius: 12px;
+}
+
+/* Circle */
+#us-floating.us-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--us-bg);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: default;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: width 0.2s, height 0.2s, border-radius 0.2s;
+  overflow: hidden;
+}
+
+#us-floating.us-circle .us-name {
+  font-size: 10px;
+  color: #ccc;
+  max-width: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#us-floating.us-circle .us-price {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 1px 0;
+  letter-spacing: 0.3px;
+}
+
+#us-floating.us-circle .us-pct {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+#us-floating.us-circle .us-placeholder {
+  font-size: 10px;
+  color: #ccc;
+  text-align: center;
+  padding: 0 6px;
+  line-height: 1.3;
+}
+
+/* Expanded panel */
+#us-floating.us-rect {
+  width: 320px;
+  height: auto;
+  border-radius: var(--us-radius);
+  background: var(--us-bg);
+  color: #fff;
+  cursor: default;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transition: width 0.2s, height 0.2s, border-radius 0.2s;
+}
+
+#us-floating.us-rect .us-header {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  cursor: grab;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+#us-floating.us-rect .us-header.dragging {
+  cursor: grabbing;
+}
+
+#us-floating.us-rect .us-h-name {
+  font-size: 13px;
+  font-weight: 600;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#us-floating.us-rect .us-h-code {
+  font-size: 11px;
+  color: #888;
+  margin-left: 6px;
+  font-family: "SF Mono", Menlo, monospace;
+}
+
+#us-floating.us-rect .us-main {
+  padding: 10px 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+#us-floating.us-rect .us-m-price {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#us-floating.us-rect .us-m-pct {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#us-floating.us-rect .us-m-change {
+  font-size: 12px;
+  color: #aaa;
+}
+
+#us-floating.us-rect .us-grid {
+  padding: 0 12px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+}
+
+#us-floating.us-rect .us-cell {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+#us-floating.us-rect .us-cell .us-k {
+  color: #888;
+}
+
+#us-floating.us-rect .us-cell .us-v {
+  color: #ddd;
+  font-family: "SF Mono", Menlo, monospace;
+}
+
+#us-floating.us-rect .us-footer {
+  padding: 4px 12px 8px;
+  font-size: 10px;
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#us-floating .us-kofi {
+  color: #888;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#us-floating .us-kofi:hover {
+  color: #ff8a87;
+}
+
+/* US convention: green up, red down */
+#us-floating .us-up { color: var(--us-green); }
+#us-floating .us-down { color: var(--us-red); }
+#us-floating .us-flat { color: #aaa; }
+
+#us-floating.us-rect .us-cell .us-v.us-up { color: var(--us-green); }
+#us-floating.us-rect .us-cell .us-v.us-down { color: var(--us-red); }
